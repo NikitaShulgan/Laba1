@@ -21,7 +21,7 @@ x = tf.keras.layers.Flatten()(x)
 # Dense-слой получает информацию со всех узлов предыдущего слоя, функция активации softmax
 outputs = tf.keras.layers.Dense(NUM_CLASSES, activation=tf.keras.activations.softmax)(x)
 
-#Анализ полученных результатов
+# Анализ полученных результатов
 Из-за ряда факторов, таких как:
 1) избыточна сложная модель
 2) недостаточность датасета

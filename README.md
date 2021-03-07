@@ -21,5 +21,34 @@ x = tf.keras.layers.Flatten()(x)
 # Dense-слой получает информацию со всех узлов предыдущего слоя, функция активации softmax
 outputs = tf.keras.layers.Dense(NUM_CLASSES, activation=tf.keras.activations.softmax)(x)
 
+#Анализ полученных результатов
+Из-за ряда факторов, таких как:
+1) избыточна сложная модель
+2) недостаточность датасета
+3) и д.р.
+у нас модель переобучилась.
+
 # Создать и обучить сверточную нейронную сеть произвольной архитектуры с количеством сверточных слоев >3.
 
+# Сверточная нейронная сеть организована из стеков Conv2D, функции активации ReLU и операций MaxPooling2D.
+
+ inputs = tf.keras.Input(shape=(RESIZE_TO, RESIZE_TO, 3))
+  x = tf.keras.layers.Conv2D(filters=8, kernel_size=3)(inputs)
+  x = tf.keras.activations.relu(x)
+  x = tf.keras.layers.MaxPool2D()(x)
+  x = tf.keras.layers.Conv2D(filters=16, kernel_size=3)(inputs)
+  x = tf.keras.activations.relu(x)
+  x = tf.keras.layers.MaxPool2D()(x)
+  x = tf.keras.layers.Conv2D(filters=32, kernel_size=3)(inputs)
+  x = tf.keras.activations.relu(x)
+  x = tf.keras.layers.MaxPool2D()(x)
+  x = tf.keras.layers.Conv2D(filters=64, kernel_size=3)(inputs)
+  x = tf.keras.activations.relu(x)
+  x = tf.keras.layers.MaxPool2D()(x)
+  x = tf.keras.layers.Conv2D(filters=128, kernel_size=3)(inputs)
+  x = tf.keras.activations.relu(x)
+  x = tf.keras.layers.MaxPool2D()(x)
+  x = tf.keras.layers.Flatten()(x)
+  outputs = tf.keras.layers.Dense(NUM_CLASSES, activation=tf.keras.activations.softmax)(x)
+  
+  

@@ -8,3 +8,5 @@ epoch_categorical_accuracy
 
 epoch_loss
 ![image](https://user-images.githubusercontent.com/80168174/110246531-02391d80-7f79-11eb-8751-7edd820b3c8a.png)
+
+# Создать и обучить сверточную нейронную сеть произвольной архитектуры с количеством сверточных слоев >3.

@@ -1,7 +1,7 @@
 # Лабораторная работа #1
 # Подготовка окружения для решения задачи классификации изображений из набора данных Oregon Wildlife с использованием нейронных сетей глубокого обучения
 # Графики изначальные
- Оранживая - обучающая выборка, Синия - валидационная выборка
+ Оранживая - обучающая выборка, Синия - валидационная выборка (на всех графиках в данном отчете)
 https://tensorboard.dev/experiment/TW5KbIZ5T0efWcXAi7WTyA/#scalars&run=train               
 epoch_categorical_accuracy
 ![image](https://user-images.githubusercontent.com/80168174/110246503-e59ce580-7f78-11eb-934e-78ad2a30a6b2.png)
@@ -51,4 +51,12 @@ outputs = tf.keras.layers.Dense(NUM_CLASSES, activation=tf.keras.activations.sof
   x = tf.keras.layers.Flatten()(x)
   outputs = tf.keras.layers.Dense(NUM_CLASSES, activation=tf.keras.activations.softmax)(x)
   
-  
+  https://tensorboard.dev/experiment/8e972T9ERIqHqEGpvNRfYg/#scalars
+  epoch_categorical_accuracy
+  ![image](https://user-images.githubusercontent.com/80168174/110256009-9de18280-7fa7-11eb-86d7-da0a45158d6b.png)
+
+ epoch_loss
+![image](https://user-images.githubusercontent.com/80168174/110256019-aafe7180-7fa7-11eb-96f7-2cec5180112c.png)
+
+ # Анализ результатов
+ У нас изначально было переобучение, из-за сложности модели и небольшого датасета. Я усложнил модель, датасет остался, следовательно результаты данной модели хуже чем изначальные. 

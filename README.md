@@ -3,5 +3,5 @@
 # Графики изначальные
  Оранживая - обучающая выборка, Синия - валидационная выборка
 https://tensorboard.dev/experiment/TW5KbIZ5T0efWcXAi7WTyA/#scalars&run=train
-
-
+epoch_categorical_accuracy
+![image](https://user-images.githubusercontent.com/80168174/110246503-e59ce580-7f78-11eb-934e-78ad2a30a6b2.png)

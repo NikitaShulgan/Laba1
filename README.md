@@ -1,12 +1,12 @@
 # Лабораторная работа #1
 ## Подготовка окружения для решения задачи классификации изображений из набора данных Oregon Wildlife с использованием нейронных сетей глубокого обучения
 ###### Графики изначальные
- Оранживая - обучающая выборка, Синия - валидационная выборка (на всех графиках в данном отчете)
+Оранживая - обучающая выборка, Синия - валидационная выборка (на всех графиках в данном отчете)
 https://tensorboard.dev/experiment/TW5KbIZ5T0efWcXAi7WTyA/#scalars&run=train  
-epoch_categorical_accuracy
+###### epoch_categorical_accuracy
 <img src="https://raw.githubusercontent.com/NikitaShulgan/Laba1/main/epoch_categorical_accuracy%20(1).svg">
 
-epoch_loss
+###### epoch_loss
 <img src="https://raw.githubusercontent.com/NikitaShulgan/Laba1/main/epoch_loss.svg">
 
 ## Описание архитектуры
@@ -58,10 +58,10 @@ outputs = tf.keras.layers.Dense(NUM_CLASSES, activation=tf.keras.activations.sof
   outputs = tf.keras.layers.Dense(NUM_CLASSES, activation=tf.keras.activations.softmax)(x)
  ```
 https://tensorboard.dev/experiment/8e972T9ERIqHqEGpvNRfYg/#scalars          
-epoch_categorical_accuracy
+###### epoch_categorical_accuracy
 <img src="https://raw.githubusercontent.com/NikitaShulgan/Laba1/main/epoch_categorical_accuracy%20(2).svg">
 
-epoch_loss
+###### epoch_loss
 <img src="https://raw.githubusercontent.com/NikitaShulgan/Laba1/main/epoch_loss%20(1).svg">
 
 ## Анализ результатов

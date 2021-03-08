@@ -2,11 +2,13 @@
 ## Подготовка окружения для решения задачи классификации изображений из набора данных Oregon Wildlife с использованием нейронных сетей глубокого обучения
 ###### Графики изначальные
  Оранживая - обучающая выборка, Синия - валидационная выборка (на всех графиках в данном отчете)
-https://tensorboard.dev/experiment/TW5KbIZ5T0efWcXAi7WTyA/#scalars&run=train               
+https://tensorboard.dev/experiment/TW5KbIZ5T0efWcXAi7WTyA/#scalars&run=train  
+
+![Alt text]https://raw.githubusercontent.com/NikitaShulgan/Laba1/main/epoch_categorical_accuracy%20(1).svg)
+<img src="https://raw.githubusercontent.com/NikitaShulgan/Laba1/main/epoch_categorical_accuracy%20(1).svg>
+
 epoch_categorical_accuracy
 ![image](https://user-images.githubusercontent.com/80168174/110246503-e59ce580-7f78-11eb-934e-78ad2a30a6b2.png)
-
-
 
 epoch_loss
 ![image](https://user-images.githubusercontent.com/80168174/110246531-02391d80-7f79-11eb-8751-7edd820b3c8a.png)

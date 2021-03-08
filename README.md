@@ -10,16 +10,21 @@ epoch_loss
 ![image](https://user-images.githubusercontent.com/80168174/110246531-02391d80-7f79-11eb-8751-7edd820b3c8a.png)
 ## Описание архитектуры
 ###### Сверточный слой, 8 фильтров, ядро 3x3.
-#x = tf.keras.layers.Conv2D(filters=8, kernel_size=3)(inputs)
-
+```
+x = tf.keras.layers.Conv2D(filters=8, kernel_size=3)(inputs)
+```
 ###### Операция макс пуллинка для 2х мерных данных
+```
 x = tf.keras.layers.MaxPool2D()(x)
-
+```
 ###### Flatten используется для конвертации входящих данных в меньшую размерность.
+```
 x = tf.keras.layers.Flatten()(x)
-
+```
 ###### Dense-слой получает информацию со всех узлов предыдущего слоя, функция активации softmax
+```
 outputs = tf.keras.layers.Dense(NUM_CLASSES, activation=tf.keras.activations.softmax)(x)
+```
 
 ## Анализ полученных результатов
 Из-за ряда факторов, таких как:
@@ -31,7 +36,7 @@ outputs = tf.keras.layers.Dense(NUM_CLASSES, activation=tf.keras.activations.sof
 # Создать и обучить сверточную нейронную сеть произвольной архитектуры с количеством сверточных слоев >3.
 
 ## Сверточная нейронная сеть организована из стеков Conv2D, функции активации ReLU и операций MaxPooling2D.
-
+```
  inputs = tf.keras.Input(shape=(RESIZE_TO, RESIZE_TO, 3))
   x = tf.keras.layers.Conv2D(filters=8, kernel_size=3)(inputs)
   x = tf.keras.activations.relu(x)
@@ -50,7 +55,7 @@ outputs = tf.keras.layers.Dense(NUM_CLASSES, activation=tf.keras.activations.sof
   x = tf.keras.layers.MaxPool2D()(x)
   x = tf.keras.layers.Flatten()(x)
   outputs = tf.keras.layers.Dense(NUM_CLASSES, activation=tf.keras.activations.softmax)(x)
-  
+ ```
   https://tensorboard.dev/experiment/8e972T9ERIqHqEGpvNRfYg/#scalars
   epoch_categorical_accuracy
   ![image](https://user-images.githubusercontent.com/80168174/110256009-9de18280-7fa7-11eb-86d7-da0a45158d6b.png)

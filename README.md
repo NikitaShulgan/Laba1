@@ -1,28 +1,28 @@
 # Лабораторная работа #1
 ## Подготовка окружения для решения задачи классификации изображений из набора данных Oregon Wildlife с использованием нейронных сетей глубокого обучения
-###### Графики изначальные
+### Графики изначальные
 Оранживая - обучающая выборка, Синия - валидационная выборка (на всех графиках в данном отчете)
 https://tensorboard.dev/experiment/TW5KbIZ5T0efWcXAi7WTyA/#scalars&run=train  
-###### epoch_categorical_accuracy
+#### epoch_categorical_accuracy
 <img src="https://raw.githubusercontent.com/NikitaShulgan/Laba1/main/epoch_categorical_accuracy%20(1).svg">
 
-###### epoch_loss
+#### epoch_loss
 <img src="https://raw.githubusercontent.com/NikitaShulgan/Laba1/main/epoch_loss.svg">
 
 ## Описание архитектуры
-###### Сверточный слой, 8 фильтров, ядро 3x3.
+#### Сверточный слой, 8 фильтров, ядро 3x3.
 ```
 x = tf.keras.layers.Conv2D(filters=8, kernel_size=3)(inputs)
 ```
-###### Операция макс пуллинга для 2х мерных данных
+#### Операция макс пуллинга для 2х мерных данных
 ```
 x = tf.keras.layers.MaxPool2D()(x)
 ```
-###### Flatten используется для конвертации входящих данных в меньшую размерность.
+#### Flatten используется для конвертации входящих данных в меньшую размерность.
 ```
 x = tf.keras.layers.Flatten()(x)
 ```
-###### Dense-слой получает информацию со всех узлов предыдущего слоя, функция активации softmax
+#### Dense-слой получает информацию со всех узлов предыдущего слоя, функция активации softmax
 ```
 outputs = tf.keras.layers.Dense(NUM_CLASSES, activation=tf.keras.activations.softmax)(x)
 ```
@@ -58,10 +58,10 @@ outputs = tf.keras.layers.Dense(NUM_CLASSES, activation=tf.keras.activations.sof
   outputs = tf.keras.layers.Dense(NUM_CLASSES, activation=tf.keras.activations.softmax)(x)
  ```
 https://tensorboard.dev/experiment/8e972T9ERIqHqEGpvNRfYg/#scalars          
-###### epoch_categorical_accuracy
+#### epoch_categorical_accuracy
 <img src="https://raw.githubusercontent.com/NikitaShulgan/Laba1/main/epoch_categorical_accuracy%20(2).svg">
 
-###### epoch_loss
+#### epoch_loss
 <img src="https://raw.githubusercontent.com/NikitaShulgan/Laba1/main/epoch_loss%20(1).svg">
 
 ## Анализ результатов

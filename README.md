@@ -13,7 +13,7 @@ epoch_loss
 ```
 x = tf.keras.layers.Conv2D(filters=8, kernel_size=3)(inputs)
 ```
-###### Операция макс пуллинка для 2х мерных данных
+###### Операция макс пуллинга для 2х мерных данных
 ```
 x = tf.keras.layers.MaxPool2D()(x)
 ```

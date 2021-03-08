@@ -36,7 +36,7 @@ outputs = tf.keras.layers.Dense(NUM_CLASSES, activation=tf.keras.activations.sof
 
 ## Создать и обучить сверточную нейронную сеть произвольной архитектуры с количеством сверточных слоев >3.
 
-### Сверточная нейронная сеть организована из стеков Conv2D, функции активации ReLU и операций MaxPooling2D.
+### 1. Сверточная нейронная сеть организована из стеков Conv2D, функции активации ReLU и операций MaxPooling2D.
 ```
  inputs = tf.keras.Input(shape=(RESIZE_TO, RESIZE_TO, 3))
   x = tf.keras.layers.Conv2D(filters=8, kernel_size=3)(inputs)
@@ -63,6 +63,26 @@ https://tensorboard.dev/experiment/8e972T9ERIqHqEGpvNRfYg/#scalars
 
 #### epoch_loss
 <img src="https://raw.githubusercontent.com/NikitaShulgan/Laba1/main/epoch_loss%20(1).svg">
+
+### 2. Сверточная нейронная сеть из нескольких последовательных слоев Conv2D, функции активации ReLU, операций MaxPool2D и Flatten.
+```
+  x = tf.keras.layers.Conv2D(filters=8, kernel_size=3)(inputs)
+  x = tf.keras.layers.Conv2D(filters=16, kernel_size=3)(inputs)
+  x = tf.keras.layers.Conv2D(filters=32, kernel_size=3)(inputs)
+  x = tf.keras.activations.relu(x)
+  x = tf.keras.layers.MaxPool2D()(x)
+  x = tf.keras.layers.Flatten()(x)
+```
+#### epoch_categorical_accuracy
+<img src="https://raw.githubusercontent.com/NikitaShulgan/Laba1/main/epoch_categorical_accuracy%20(3).svg">
+
+#### epoch_loss
+<img src="https://raw.githubusercontent.com/NikitaShulgan/Laba1/main/epoch_loss%20(2).svg">
+
+### 3. Сверточная нейронная сеть .
+```
+
+```
 
 ## Анализ результатов
  У нас изначально было переобучение, из-за сложности модели и небольшого датасета. Я усложнил модель, датасет остался, следовательно результаты данной модели хуже чем изначальные. 

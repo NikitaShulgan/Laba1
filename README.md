@@ -79,10 +79,14 @@ https://tensorboard.dev/experiment/8e972T9ERIqHqEGpvNRfYg/#scalars
 #### epoch_loss
 <img src="https://raw.githubusercontent.com/NikitaShulgan/Laba1/main/epoch_loss%20(2).svg">
 
-### 3. Сверточная нейронная сеть .
+### 3. Сверточная нейронная сеть из Conv2D и операций AveragePooling2D, Flatten.
+```
+  x = tf.keras.layers.Conv2D(filters=8, kernel_size=3)(inputs)
+  x = tf.keras.layers.AveragePooling2D()(x)
+  x = tf.keras.layers.Flatten()(x)
 ```
 
-```
+
 
 ## Анализ результатов
  У нас изначально было переобучение, из-за сложности модели и небольшого датасета. Я усложнил модель, датасет остался, следовательно результаты данной модели хуже чем изначальные. 

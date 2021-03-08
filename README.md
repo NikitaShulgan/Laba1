@@ -10,7 +10,7 @@ epoch_loss
 ![image](https://user-images.githubusercontent.com/80168174/110246531-02391d80-7f79-11eb-8751-7edd820b3c8a.png)
 # Описание архитектуры
 # Сверточный слой, 8 фильтров, ядро 3x3.
-x = tf.keras.layers.Conv2D(filters=8, kernel_size=3)(inputs)
+#x = tf.keras.layers.Conv2D(filters=8, kernel_size=3)(inputs)
 
 # Операция макс пуллинка для 2х мерных данных
 x = tf.keras.layers.MaxPool2D()(x)

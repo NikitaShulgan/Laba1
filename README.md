@@ -4,7 +4,6 @@
  Оранживая - обучающая выборка, Синия - валидационная выборка (на всех графиках в данном отчете)
 https://tensorboard.dev/experiment/TW5KbIZ5T0efWcXAi7WTyA/#scalars&run=train  
 
-![Alt text]https://raw.githubusercontent.com/NikitaShulgan/Laba1/main/epoch_categorical_accuracy%20(1).svg)
 <img src="https://raw.githubusercontent.com/NikitaShulgan/Laba1/main/epoch_categorical_accuracy%20(1).svg>
 
 epoch_categorical_accuracy

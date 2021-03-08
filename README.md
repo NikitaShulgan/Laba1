@@ -57,12 +57,12 @@ outputs = tf.keras.layers.Dense(NUM_CLASSES, activation=tf.keras.activations.sof
   x = tf.keras.layers.Flatten()(x)
   outputs = tf.keras.layers.Dense(NUM_CLASSES, activation=tf.keras.activations.softmax)(x)
  ```
-  https://tensorboard.dev/experiment/8e972T9ERIqHqEGpvNRfYg/#scalars
-  epoch_categorical_accuracy
-  <img src="https://raw.githubusercontent.com/NikitaShulgan/Laba1/main/epoch_categorical_accuracy%20(2).svg">
+https://tensorboard.dev/experiment/8e972T9ERIqHqEGpvNRfYg/#scalars          
+epoch_categorical_accuracy
+<img src="https://raw.githubusercontent.com/NikitaShulgan/Laba1/main/epoch_categorical_accuracy%20(2).svg">
 
- epoch_loss
+epoch_loss
 <img src="https://raw.githubusercontent.com/NikitaShulgan/Laba1/main/epoch_loss%20(1).svg">
 
- ## Анализ результатов
+## Анализ результатов
  У нас изначально было переобучение, из-за сложности модели и небольшого датасета. Я усложнил модель, датасет остался, следовательно результаты данной модели хуже чем изначальные. 
